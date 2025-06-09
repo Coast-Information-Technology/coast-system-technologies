@@ -18,10 +18,12 @@
     
    // Back to top button
    $(window).scroll(function () {
-    if ($(this).scrollTop() > 300) {
+    if ($(this).scrollTop() > 50) {
         $('.back-to-top').fadeIn('slow');
+        $('.container-fluid.bg-primary').addClass('shadow-sm');
     } else {
         $('.back-to-top').fadeOut('slow');
+        $('.container-fluid.bg-primary').removeClass('shadow-sm');
     }
     });
     $('.back-to-top').click(function () {

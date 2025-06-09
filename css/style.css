@@ -1,3 +1,24 @@
+/* Font Families */
+:root {
+    --heading-font: 'Spectral', serif;
+    --body-font: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+}
+
+h1, h2, h3, h4, h5, h6,
+.navbar-brand .company-name,
+.carousel-caption h1,
+.carousel-caption h6,
+.services-content h4,
+.blog-content h5,
+.team-name h4,
+.testimonial-item h4 {
+    font-family: var(--heading-font);
+}
+
 .logo {
     width: 170px;
 }
@@ -115,8 +136,19 @@
 
 
 /*** Navbar Start ***/
+.navbar {
+    position: relative;
+}
+
+.container-fluid.bg-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--bs-primary) !important;
+}
+
 .navbar .navbar-nav {
-    padding: 15px 0;
+    padding: 1rem 0;
 }
 
 .navbar .navbar-nav .nav-link {
@@ -158,6 +190,27 @@
     visibility: visible;
     transition: .5s;
     opacity: 1;
+}
+
+/* Logo and Company Name Styles */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-brand .logo {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.navbar-brand .company-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    line-height: 1.2;
 }
 
 /*** Navbar End ***/
@@ -311,7 +364,7 @@
 }
 
 .page-header {
-    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../img/carousel-1.jpeg) center center no-repeat;
     background-size: cover;
 }
 
@@ -674,6 +727,19 @@
 .footer .hightech-link a:hover {
     background: var(--bs-secondary);
     border: 0;
+}
+
+/* Footer Logo Styles */
+.footer .logo {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.footer h1.text-white {
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-top: 5px;
 }
 
 /*** Footer End ***/
